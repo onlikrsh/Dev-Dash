@@ -78,7 +78,7 @@ export async function initGithub() {
     const username = CONFIG.GITHUB_USERNAME;
 
     const cached = load('devdash_github');
-    if (cached) {
+    if (cached && cached.contribs) {
         renderStats(cached.user, cached.repos, cached.contribs);
         renderContribGraph(cached.contribs.contributions);
     }
