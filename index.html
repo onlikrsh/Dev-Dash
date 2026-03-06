@@ -11,10 +11,41 @@
 </head>
 <body>
     <main class="dashboard" id="dashboard">
-        <section class="widget widget--clock" id="widget-clock">
+
+        <!-- ----------------------------------Clock Widget---------------------------------- -->
+        <div class="widget widget--clock" id="widget-clock">
+            <div class="pill-header" style="position: absolute; top: 20px; left: 20px;" vid="10">
+
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vid="11"><circle cx="12" cy="12" r="10" vid="12"></circle><polyline points="12 6 12 12 16 14" vid="13"></polyline></svg>
+                <span vid="14">Local System</span>
+
+            </div>
             <div class="widget__time" id="clock-time">00:00:00</div>
             <div class="widget__date" id="clock-date">Loading...</div>
-        </section>
+        </div>
+        <!-- ----------------------------------Clock Widget Ends---------------------------------- -->
+
+
+        <!-- ----------------------------------Weather Widget---------------------------------- -->
+        <div class="widget widget-weather" vid="17">
+
+            <div class="pill-header" vid="18">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" vid="19"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" vid="20"></path></svg>
+                <span vid="21">Weather</span>
+            </div>
+
+            <div class="weather-main" vid="22">
+                <div class="temp-display" vid="23">22°</div>
+                <svg class="weather-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" vid="24"><circle cx="12" cy="12" r="5" vid="25"></circle><line x1="12" y1="1" x2="12" y2="3" vid="26"></line><line x1="12" y1="21" x2="12" y2="23" vid="27"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" vid="28"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" vid="29"></line><line x1="1" y1="12" x2="3" y2="12" vid="30"></line><line x1="21" y1="12" x2="23" y2="12" vid="31"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" vid="32"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" vid="33"></line></svg>
+            </div>
+
+            <div class="weather-detail" vid="34">
+                <span class="token-key" vid="35">loc</span>: <span class="token-string" vid="36">Loading...</span>
+            </div>
+
+        </div>
+        <!-- ----------------------------------Weather Widget Ends---------------------------------- -->
+
     </main>
     <script type="module" src="js/app.js"></script>
 </body>
