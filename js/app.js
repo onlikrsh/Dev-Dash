@@ -1,7 +1,12 @@
 import { initClock } from "./widgets/clock.js";
+import { initWeather } from "./widgets/weather.js";
 
-function init(){
+async function init(){
     initClock();
+
+    await Promise.allSettled([
+        initWeather()
+    ]);
 
     console.log('DevDash Initialized✅')
 }
