@@ -7,6 +7,7 @@ const contentEl = qs(".weather-main");
 const detailEl = qs(".weather-detail");
 
 const API_KEY = CONFIG.WEATHER_API_KEY;
+const city = CONFIG.WEATHER_CITY;
 
 function kelvinToCelsicus(kelvin){
     return Math.round(kelvin - 273.15);
@@ -47,8 +48,7 @@ export async function initWeather(){
     }
 
     try {
-        const city = load('devdash_city', 'Hyderabad')
-
+        // const city = load('weather_city', city);
         const data = await fetchWithRetry(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
         )
