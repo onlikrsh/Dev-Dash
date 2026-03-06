@@ -28,7 +28,7 @@ export async function fetchWithRetry(url, options = {}, retries = 3){
                 throw error;
             }
 
-            // Wait before retrying: 1s ->  2s ->  4s
+            // Wait before retrying: 1s ->  2s ->  4s (EXPONENTIAL BACKOFF)
             const waitTime = 1000 * Math.pow(2, attempt);
             console.warn(`Attempt ${attempt + 1} failed. Retrying in ${waiTime}ms..`);
 
