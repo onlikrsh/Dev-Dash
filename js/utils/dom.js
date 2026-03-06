@@ -8,10 +8,10 @@ export function qsa(selector){
 }
 
 // Shortcut for creating HTML elements with classes and text
-export function createElement(tag, classname='', textContent=''){
+export function createElement(tag, className='', textContent=''){
     const el = document.createElement(tag);
-    if(classname){
-        el.classname = classname;
+    if(className){
+        el.className = className;
     }
     if(textContent){
         el.textContent = textContent;
