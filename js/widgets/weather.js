@@ -1,11 +1,12 @@
 import { qs } from '../utils/dom.js';
 import {save, load} from '../utils/storage.js';
 import { fetchWithRetry } from '../services/api.js'
+import CONFIG from '../config.js'
 
 const contentEl = qs(".weather-main");
 const detailEl = qs(".weather-detail");
 
-const API_KEY = 'e113565295b1485abef849dbd9adbc7a'
+const API_KEY = CONFIG.WEATHER_API_KEY;
 
 function kelvinToCelsicus(kelvin){
     return Math.round(kelvin - 273.15);
