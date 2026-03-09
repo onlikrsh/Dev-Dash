@@ -45,7 +45,7 @@ function renderContribGraph(contributions) {
     gridEl.innerHTML = '';
 
     // The API returns 365 days, 154 days only needed the last  to fill our 22 columns (22 * 7 = 154)
-    const recentContributions = contributions.slice(-154);
+    const recentContributions = contributions.slice(-54)
 
     for (let week = 0; week < 22; week++) {
         const col = createElement('div', 'graph-column');
