@@ -357,18 +357,20 @@ h1, h2, h3 {
 
 .bookmarks-add {
     display: flex;
-    gap: 6px;
+    gap: 8px;
     margin-top: auto;
     padding-top: 12px;
     border-top: 1px solid var(--border-subtle);
+    flex-wrap: wrap;
 }
 
 .bookmarks-input {
     flex: 1;
-    padding: 8px 10px;
+    min-width: 80px;
+    padding: 10px 12px;
     background: var(--bg-pill);
     border: 1px solid var(--border-subtle);
-    border-radius: 6px;
+    border-radius: 8px;
     color: var(--text-primary);
     font-size: 12px;
     font-family: var(--font-sans);
