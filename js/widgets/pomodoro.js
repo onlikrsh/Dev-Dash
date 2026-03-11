@@ -29,30 +29,31 @@ function render() {
 
 function tick() {
     timeLeft--;
-    render()
+    render();
 
-    if(timeLeft <= 0){
+    if (timeLeft <= 0) {
+
         clearInterval(timerId);
         timerId = null;
         toggleBtn.innerHTML = PLAY_ICON;
-    }
 
-    if(isFocusMode){
-        sessionsCompleted++;
-        save('devdash_pomo_sessions', sessionsCompleted);
-        isFocusMode = false;
-        timeLeft = BREAK_TIME;
-        render();
+        if (isFocusMode) {
+            sessionsCompleted++;
+            save('devdash_pomo_sessions', sessionsCompleted);
+            isFocusMode = false;
+            timeLeft = BREAK_TIME;
+            render();
 
-        if(Notification.permission === 'granted'){
-            new Notification('DevDash', {body: `Focus Session complete! Take a break.`});
+            if (Notification.permission === 'granted') {
+                new Notification('DevDash', { body: 'Focus session complete! Take a break.' });
+            }
         } else {
             isFocusMode = true;
             timeLeft = FOCUS_TIME;
-            render()
+            render();
         }
+
     }
-    
 }
 
 function handleToggle() {
