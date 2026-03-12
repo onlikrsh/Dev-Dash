@@ -4,6 +4,7 @@ import { qs } from "../utils/dom.js";
 let timeEl = qs("#clock-time");
 let dateEl = qs("#clock-date");
 
+
 const timeFormatter = new Intl.DateTimeFormat('en-IN', {
     hour: '2-digit',
     minute: '2-digit',

@@ -7,7 +7,18 @@ const totalEl = qs('#github-total');
 const streakEl = qs('#github-streak');
 const langEl = qs('#github-lang');
 const gridEl = qs('#contrib-grid');
+let target = qs(".target");
 
+// target.addEventListener("dragover", (ev) => {
+//   ev.preventDefault();
+// });
+// target.addEventListener("drop", (ev) => {
+  
+// });
+
+
+// grid-column: span 2;
+// grid-row: span 1;
 
 function calculateStreak(contributions) {
     let streak = 0;
